@@ -1,2 +1,2 @@
-# xmas
- create xmas card
+# XmasCard
+ Create Xmas card
