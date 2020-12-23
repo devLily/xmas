@@ -26,6 +26,7 @@
         background-size: cover;
         background-position: center;
         margin: 200px auto 0px auto;
+        cursor: pointer;
       }
 
       .envelope-message {
@@ -34,6 +35,10 @@
       }
 
       .letter-close {
+        display: block;
+      }
+
+      .letter-open {
         display: none;
       }
 
@@ -54,6 +59,7 @@
         color: white;
         text-align: center;
         margin-top: 30px;
+        margin-bottom: 30px;
       }
 
       .messagebox {
@@ -71,12 +77,43 @@
         text-align: right;
         margin-bottom: 0px;
       }
+
+      @media screen and (max-width: 760px) {
+        .messagebox {
+          width: 300px;
+          padding: 20px;
+        }
+
+        .rtan {
+          width: 150px;
+          height: 150px;
+          margin: 70px auto 0px auto;
+        }
+
+        h1 {
+          font-size: 28px;
+        }
+
+        .envelope {
+          margin: 150px auto 0px auto;
+        }
+      }
+
+      /* 365 x 645 size가 대부분 모바일 사이즈에 적용 가능  */
     </style>
+    <script>
+      function open_letter() {
+        document.getElementsByClassName("letter-close")[0].style.display =
+          "none";
+        document.getElementsByClassName("letter-open")[0].style.display =
+          "block";
+      }
+    </script>
   </head>
 
   <body>
     <div class="letter-close">
-      <div class="envelope"></div>
+      <div class="envelope" onclick="open_letter()"></div>
       <h2 class="envelope-message">봉투를 열어봐</h2>
     </div>
     <div class="letter-open">
