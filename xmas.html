@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Happy NewYear!</title>
+    <link
+      rel="shortcut icon"
+      href="https://freepngimg.com/download/christmas/26196-6-christmas-stocking.png"
+    />
+    <meta
+      property="og:image"
+      content="https://www.christmastreeassociation.org/wp-content/uploads/2016/06/multiple-christmas-trees-in-one-household-800x400.jpg"
+    />
+    <meta property="og:title" content="길동이의 카드" />
+    <meta property="og:description" content="2020을 추억하며" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap"
@@ -88,6 +98,7 @@
           width: 150px;
           height: 150px;
           margin: 70px auto 0px auto;
+          cursor: pointer;
         }
 
         h1 {
@@ -101,12 +112,18 @@
 
       /* 365 x 645 size가 대부분 모바일 사이즈에 적용 가능  */
     </style>
+    <script src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/snow.js"></script>
     <script>
       function open_letter() {
         document.getElementsByClassName("letter-close")[0].style.display =
           "none";
         document.getElementsByClassName("letter-open")[0].style.display =
           "block";
+      }
+      function go_rtan() {
+        alert("앗 어떻게 찾았지?");
+        window.location.href =
+          "https://spartacodingclub.kr?f_name=%EB%B0%B0%EC%9E%AC%EA%B2%BD&f_uid=5fd4319ed63330336239207a";
       }
     </script>
   </head>
@@ -117,7 +134,7 @@
       <h2 class="envelope-message">봉투를 열어봐</h2>
     </div>
     <div class="letter-open">
-      <div class="rtan"></div>
+      <div class="rtan" onclick="go_rtan()"></div>
       <h1>2020년 수고 많았어!</h1>
       <div class="messagebox">
         친구들에게. <br />
